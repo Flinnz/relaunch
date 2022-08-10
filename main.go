@@ -39,7 +39,7 @@ func loop(count, delay uint, args []string) {
 		cmd.Stdout = os.Stdout
 		cmd.Stderr = os.Stderr
 		if err := cmd.Run(); err != nil {
-			log.Fatal(err)
+			log.Print(err)
 		}
 		time.Sleep(time.Millisecond * time.Duration(delay))
 	}
